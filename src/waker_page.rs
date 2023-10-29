@@ -53,7 +53,7 @@ impl AtomicU64SC {
     #[inline(always)]
     #[allow(unused)]
     pub fn as_mut_ptr(&mut self) -> *mut u64 {
-        self.0.as_mut_ptr()
+        self.0.as_ptr()
     }
 }
 

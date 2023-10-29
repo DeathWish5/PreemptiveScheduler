@@ -148,7 +148,7 @@ impl TaskCollection {
         });
         // SAFETY: no other Arc or Weak pointers
         let tc_clone = task_collection.clone();
-        let mut tc = unsafe { Arc::get_mut_unchecked(&mut task_collection) };
+        let tc = unsafe { Arc::get_mut_unchecked(&mut task_collection) };
         for priority in 0..MAX_PRIORITY {
             tc.future_collections
                 .push(Mutex::new(FutureCollection::new(priority)));

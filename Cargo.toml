@@ -29,5 +29,4 @@ riscv = "0.10.1"
 
 # Bare-metal mode on aarch64
 [target.'cfg(target_arch = "aarch64")'.dependencies]
-tock-registers = "0.9"
-cortex-a = "8.1.0"
+aarch64-cpu = "9.4.0"

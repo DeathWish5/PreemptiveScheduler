@@ -3,7 +3,6 @@
 #![feature(get_mut_unchecked)]
 #![feature(generators, generator_trait)]
 #![feature(stmt_expr_attributes)]
-#![feature(atomic_mut_ptr)]
 #![feature(box_into_inner)]
 #![feature(new_uninit)]
 // some interfaces is still under developing

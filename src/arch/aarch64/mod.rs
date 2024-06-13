@@ -1,6 +1,7 @@
+use aarch64_cpu::registers::*;
 use core::arch::global_asm;
-use cortex_a::registers::*;
-use tock_registers::interfaces::Readable;
+use aarch64_cpu::asm;
+use aarch64_cpu::registers::Readable;
 
 mod context;
 
@@ -31,7 +32,7 @@ pub(crate) fn wait_for_interrupt() {
     if !enable {
         intr_on();
     }
-    cortex_a::asm::wfi();
+    asm::wfi();
     if !enable {
         intr_off();
     }
